@@ -19,7 +19,7 @@ steps:
 
 - task: AzureFileCopy@3
   inputs:
-    SourcePath: '/public'
+    SourcePath: '$(System.DefaultWorkingDirectory)/public'
     azureSubscription: $(AZURE_SUBSCRIPTION)
     Destination: 'AzureBlob'
     storage: $(STORAGE_ACCOUNT)
