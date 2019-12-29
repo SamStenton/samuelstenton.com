@@ -1,22 +1,32 @@
 ---
-title: Hello World
-date: "2015-05-01T22:12:03.284Z"
-description: "Hello World"
+title: Hosting your static site using Azure DevOps and Blob Storage
+date: "2019-12-29T22:12:03.284Z"
+description: "Host "
 ---
 
-This is my first post on my new fake blog! How exciting!
+Been putting off rebooting the blog for quite some time. Renewing this domain for the third consecutive year without anything on it finaly gave me the push I needed to do something about it. 
 
-I'm sure I'll write a lot more interesting things in the future.
+What better first post than one explaining how the site is hosted. As my recent experience with Elanco has been with Azure, it makes sense to build and host this site on there. I plan on 
+using the following services from Azure. 
 
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg).
+**Azure DevOps**
 
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-> charcoal paste. The eggs may also be sold with the salted paste removed,
-> wrapped in plastic, and vacuum packed. From the salt curing process, the
-> salted duck eggs have a briny aroma, a gelatin-like egg white and a
-> firm-textured, round yolk that is bright orange-red in color.
+Will pull the site code from GitHub, run `gatsby build` and then send the output to Blob storage.
 
-![Chinese Salty Egg](./salty_egg.jpg)
+
+**Blob Storage**
+
+Holds the static site files and allows acess to them from the a the internet.
+
+
+**Content Delivery Network**
+
+Adds a super fast content delivery backend but most importantly allows me to connect my personal domain to the site.
+
+## Prerequisites
+
+This post assumes that you have access to Azure, Azure DevOps and have created a Gatsby (or similar) site sitting in GitHub. 
+
+## Azure Setup
+
+## DevOps Pipeline
