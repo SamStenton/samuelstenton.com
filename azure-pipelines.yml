@@ -1,0 +1,26 @@
+trigger:
+- master
+  
+# AzureFileCopy is only available on windows
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
+- script: yarn
+  displayName: 'install deps'
+
+- script: yarn build
+  displayName: 'yarn build'
+
+- task: AzureFileCopy@3
+  inputs:
+    SourcePath: '/public'
+    azureSubscription: $(AZURE_SUBSCRIPTION)
+    Destination: 'AzureBlob'
+    storage: $(STORAGE_ACCOUNT)
+    ContainerName: '$web'
