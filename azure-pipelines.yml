@@ -17,6 +17,12 @@ steps:
 - script: yarn build
   displayName: 'yarn build'
 
+- task: AzureStaticWebApp@0
+  inputs:
+    output_location: '$(System.DefaultWorkingDirectory)/public'
+    skip_app_build: true
+    azure_static_web_apps_api_token: $(Azure_Static_Site_Token)
+
 - task: AzureFileCopy@3
   inputs:
     SourcePath: '$(System.DefaultWorkingDirectory)/public'
