@@ -54,15 +54,14 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong> who works as a Cloud Engineer for
-        Elanco Animal Health. You should say hey on {` `}
+        Written by <strong>{author}</strong> who is an Engineer for a defence consultancy. You should say hey on {` `}
         <a href={`https://www.linkedin.com/in/samuel-stenton-840592b1/`}>
           LinkedIn
         </a>
         , follow on {` `}
         <a href={`https://twitter.com/${social.twitter}`}>Twitter</a>
         {` `} and checkout his {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>GitHub.</a>
+        <a href={`https://github.com/SamStenton`}>GitHub.</a>
       </p>
     </div>
   )
