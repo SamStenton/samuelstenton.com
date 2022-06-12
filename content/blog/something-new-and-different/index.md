@@ -11,4 +11,4 @@ After spending 2 years with Elanco as a Cloud Engineer, and before that with the
 
 I thoroughly enjoyed myself at Elanco, I've learnt an incredible amount and have definitely grown as a professional. Experiencing a divestiture and a large acquisition concurrently has been an amazing experience, one I don't expect to see in my career again. Added to that I was surrounded by some incredible people, I will miss them. 
 
-My new role takes me into a completely different sector, I'll still be an Engineer, but working for a just-out-of-startup-phase consultancy in defence. I'll contine working closly in and around Azure but with the added challange of hybrid and edge solutions thrown into the mix.
+My new role takes me into a completely different sector, I'll still be an Engineer, but working for a just-out-of-startup-phase consultancy. I'll contine working closly in and around Azure but with the added challange of hybrid and edge solutions thrown into the mix.
