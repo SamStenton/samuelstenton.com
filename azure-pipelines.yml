@@ -27,19 +27,19 @@ steps:
 - script: yarn build
   displayName: 'yarn build'
   
-- script: ls '$(System.DefaultWorkingDirectory)/public'
+- script: ls public
   displayName: 'ls'
 
 - task: AzureStaticWebApp@0
   inputs:
-    app_location: '$(System.DefaultWorkingDirectory)/public'
-    output_location: '$(System.DefaultWorkingDirectory)/public'
+    app_location: 'public'
+    output_location: 'public'
     skip_app_build: true
     azure_static_web_apps_api_token: $(Azure_Static_Site_Token)
 
 - task: AzureFileCopy@4
   inputs:
-    SourcePath: '$(System.DefaultWorkingDirectory)/public'
+    SourcePath: 'public'
     azureSubscription: $(AZURE_SUBSCRIPTION)
     Destination: 'AzureBlob'
     storage: $(STORAGE_ACCOUNT)
