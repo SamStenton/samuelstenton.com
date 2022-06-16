@@ -18,6 +18,7 @@ steps:
 
 - task: AzureStaticWebApp@0
   inputs:
+    app_location: '$(System.DefaultWorkingDirectory)/public'
     output_location: '$(System.DefaultWorkingDirectory)/public'
     skip_app_build: true
     azure_static_web_apps_api_token: $(Azure_Static_Site_Token)
