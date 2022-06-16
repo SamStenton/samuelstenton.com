@@ -1,9 +1,8 @@
 trigger:
 - master
   
-# AzureFileCopy is only available on windows
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'ubuntu-latest'
 
 steps:
 - task: NodeTool@0
@@ -23,7 +22,7 @@ steps:
     skip_app_build: true
     azure_static_web_apps_api_token: $(Azure_Static_Site_Token)
 
-- task: AzureFileCopy@3
+- task: AzureFileCopy@4
   inputs:
     SourcePath: '$(System.DefaultWorkingDirectory)/public'
     azureSubscription: $(AZURE_SUBSCRIPTION)
